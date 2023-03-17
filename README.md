@@ -14,3 +14,10 @@
 * [쉐이더 프로그래밍 (이승욱 교수님)](https://github.com/Yoongundam/23_1/tree/main/sha)
 
 * [웹 프로그래밍 (이강혁 교수님)](https://github.com/Yoongundam/23_1/tree/main/web)
+
+### 관련 링크
+
+* [강영민 교수님 Github](https://github.com/dknife/2023ML)
+
+* [배재환 교수님 사이트](http://ugame.tu.ac.kr/tmob/tmob.php?board=mobqna&command=skin_insert&exe=front_menu_main.php&fix_navi=0,3)
+
