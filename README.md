@@ -21,3 +21,10 @@
 
 * [배재환 교수님 사이트](http://ugame.tu.ac.kr/tmob/tmob.php?board=mobqna&command=skin_insert&exe=front_menu_main.php&fix_navi=0,3)
 
+### 학교 링크
+
+* [e캠퍼스](https://ecampus.tu.ac.kr/)
+
+* [미래교육플랫폼](https://up.tu.ac.kr)
+
+* [SW 사업단](http://tusw.tu.ac.kr/)
