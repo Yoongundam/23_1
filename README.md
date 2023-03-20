@@ -28,3 +28,5 @@
 * [미래교육플랫폼](https://up.tu.ac.kr)
 
 * [SW 사업단](http://tusw.tu.ac.kr/)
+
+* [게임공학과 학과 홈페이지](https://www.tu.ac.kr/game/index.do)
