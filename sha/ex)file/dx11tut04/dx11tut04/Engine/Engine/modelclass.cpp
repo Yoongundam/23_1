@@ -105,8 +105,8 @@ bool ModelClass::InitializeBuffers(ID3D11Device* device)
 
 	// Load the index array with data.
 	indices[0] = 0;  // Bottom left.
-	indices[1] = 1;  // Top middle.
-	indices[2] = 2;  // Bottom right.
+	indices[1] = 1;  // Top left.
+	indices[2] = 2;  // Top right.
 	indices[3] = 3;  // Bottom right.
 
 	// Set up the description of the static vertex buffer.
