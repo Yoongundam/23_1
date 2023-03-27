@@ -1,0 +1,80 @@
+﻿body {
+    margin: 0px;
+    padding: 0px;
+    background: gray;
+}
+
+.wrap {
+    width: 850px;
+    background: white;
+    margin: 0px auto 0px auto;
+}
+
+header {
+    background: white;
+    width: 850px;
+    height: 80px;
+    text-align: center;
+    padding: 0.1px 0px 0px 0px;
+}
+
+a {
+    text-decoration: none;
+    color: black
+}
+
+nav a:hover {
+    color: gray;
+    border-color: darkgray;
+}
+
+nav {
+    width: 850px;
+    height: 45px;
+    background: lightgray;
+    text-align: center;
+    color: black;
+    padding: 0.1px 0px 0px 0px;
+}
+
+    nav li {
+        display: inline;
+        padding: 5px;
+    }
+
+    nav a {
+        text-decoration: none;
+        color: black;
+        padding: 8px;
+        border-style: hidden hidden solid hidden;
+        border-color: transparent;
+        font-weight: bold
+    }
+
+        nav a:hover {
+            color: gray;
+            border-color: darkgray;
+        }
+
+article {
+    width: 700px;
+    background: white;
+    float: left;
+    padding: 10px;
+}
+
+aside {
+    width: 1200px;
+    background: aqua;
+    float: right;
+}
+
+footer {
+    float: bottom;
+    width: 850px;
+    height: 50px;
+    padding: 20px 0px 0px 0px;
+    background: black;
+    color: white;
+    clear: both;
+    text-align: center;
