@@ -1,0 +1,58 @@
+﻿<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>account 실습</title>
+    <script>
+
+        function inquiry() {
+            return this.balance.toString();
+        }
+
+        function deposit() {
+            let money = document.getElementById('dep').value;
+            if (money === "") {
+                return;
+            }
+            money = parseInt(money);
+            this.balance += money;
+            document.getElementById('balance').textContent = account.inquiry();
+        }
+
+        function withdraw() {
+            let money = document.getElementById('wit').value;
+            if (money === "") {
+                return;
+            }
+            money = parseInt(money);
+            if (money > account.balance) {
+                alert("잔액이 부족합니다.");
+            } else {
+                this.balance -= money;
+                document.getElementById('balance').textContent = account.inquiry();
+            }
+        }
+
+        var account = {
+            owner: "황기태",
+            code: "111",
+            balance: 35000,
+            inquiry: inquiry,
+            deposit: deposit,
+            withdraw: withdraw
+        };
+    </script>
+</head>
+<body>
+    <h3>new Object()로 객체 만들기</h3>
+    입금: <input id="dep" type="number" onchange="account.deposit()" /></br>
+    출금: <input id="wit" type="number" onchange="account.withdraw()" />
+    <br>
+    예금주 : 황기태</br>
+    code : 111</br>
+    현재 잔액: <span id="balance">35000</span>원
+    <script>
+        document.getElementById('balance').textContent = account.inquiry();
+    </script>
+</body>
+</html>
