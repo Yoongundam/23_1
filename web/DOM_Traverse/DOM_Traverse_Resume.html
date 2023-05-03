@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <p id = "id"></p>
+
+        <script>
+            var text =
+            "<이력서>"+
+            "<1>"+
+                "<제목>이력서</제목>"+
+                "<이름>윤건</이름>"+
+                "<영문>Yoon Gun</영문>"+
+                "<한문>尹建</한문>"+
+                "<주민번호>000812-3******</주민번호>"+
+                "<나이>24</나이>"+
+            "</1>"+
+            "<1>"+
+                "<휴대폰>010.4947.4336</휴대폰>"+
+                "<E-mail>gun4336@naver.com</E-mail>"+
+                "<SNS>ins) y_gun4336</SNS>"+
+                "<주소>부산광역시 남구</주소>"+
+            "</1>"+
+            "<1>"+
+                "<고등학교>고성고등학교 졸업</고등학교>"+
+                "<대학교>동명대학교 게임공학과 재학 중</대학교>"+
+            "</1>"+
+            "<1>"+
+                "<동아리>Zapper</동아리>"+
+                "<학생회>게임공학과 학생회</학생회>"+
+                "<VFestival>2019.05 V Festival 3등</VFestival>"+
+            "</1>"+
+            "<1>"+                    
+                "<부>윤상*, 4n, 군인</부>"+
+                "<모>박연*, 4n, 회사원</모>"+
+                "<누나>윤사*, 2n, 회사원</누나>"+
+                "<남동생>윤요*, 1n, 학생</남동생>"+
+            "</1>"+
+            "</이력서>";
+
+            parser = new DOMParser();
+            xmlDoc = parser.parseFromString(text,"text/xml");
+            var x = xmlDoc.documentElement;
+            var y = x.getElementByTagName("1");
+            var z = x.getElementByTagName("1").childNodes;
+            var i,table = "";
+
+            table +="<table border=1 width=80% align=center>";
+            for (i=0;i<x.length;i++)
+            {
+                table+=
+                "<tr><td>"+y[i].nodeName+"</td>"+
+                "<td>"+y[i].childNodes[0].nodeValue+"</td></tr>";
+            }
+            table+="</table><br>";
+            document.getElementById("id").innerHTML = table;
+        </script>
+    </body>
+</html>

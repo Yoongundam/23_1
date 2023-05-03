@@ -14,7 +14,7 @@ void printstars(int n) {
 
 int main() {
 	int n;
-	std::cout << "별 개수";
+	std::cout << "별 개수d";
 	std::cin >> n;
 	printstars(n);
 	return 0;
