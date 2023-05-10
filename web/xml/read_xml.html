@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Reads XML data using JavaScript</title>
+        <script>
+            function loadXMLDoc(){
+                var xmlhttp = new XMLHttpRequest();
+                xmlhttp.onreadystatechange = function(){
+                    if(this.readyState==4&&this.status==200){
+                        display_items(this);
+                    }
+                };
+                xmlhttp.open("GET", "XML_resum_simple.xml", true);
+                xmlhttp.send();
+            }
+            function display_items(xml){
+                var i,j,table = "";
+                var xmlDoc=xml.responseXML;
+                var x = xmlDoc.getElementsByTagName("이력서");
+
+                table += "<table border=1 width=80% align=center>";
+                    for(i=0;i<x.length;i++){
+                        table+=
+                        "<tr><td>"+x[i].nodeName+"</td>"+
+                        "<td>"+x[i].childNodes[0].nodeValue+"</td></tr>";
+                    }
+                    table+="</table><br>";
+                    document.getElementById("id").innerHTML = table;
+            }
+        </script>
+    </head>
+    <body>
+        <center>
+            <h1>Displaying the table from XML elements</h1><br><br>
+            <button type="button" class="button" onclick="loadXMLDoc()">Try it!</button>
+        </center>
+    </body>
+</html>
