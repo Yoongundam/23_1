@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>학생 정보 검색</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 50%;
+        }
+        th, td {
+            padding: 8px;
+            text-align: center;
+        }
+        .center {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+    </style>
+    <script>
+        function searchStudent() {
+            var input = document.getElementById("nameInput").value;
+            var xmlDoc = loadXMLDoc("resum.xml");
+            var students = xmlDoc.getElementsByTagName("Student");
+            var result = document.getElementById("searchResult");
+
+            for (var i = 0; i < students.length; i++) {
+                var name = students[i].getElementsByTagName("Name")[0].textContent;
+                if (name === input) {
+                    var studentID = students[i].getAttribute("ID");
+                    var age = students[i].getElementsByTagName("Age")[0].textContent;
+                    var phoneNumber = students[i].getElementsByTagName("Phonnenumber")[0].textContent;
+                    var email = students[i].getElementsByTagName("E-mail")[0].textContent;
+
+                    var tableHTML = "<table border=1>" +
+                                    "<tbody>" +
+                                    "<tr><th>학생 ID</th><td>" + studentID + "</td></tr>" +
+                                    "<tr><th>나이</th><td>" + age + "</td></tr>" +
+                                    "<tr><th>전화번호</th><td>" + phoneNumber + "</td></tr>" +
+                                    "<tr><th>이메일</th><td>" + email + "</td></tr>" +
+                                    "</tbody>" +
+                                    "</table>";
+
+                    result.innerHTML = tableHTML;
+                    return;
+                }
+            }
+
+            alert("일치하는 학생을 찾을 수 없습니다.");
+        }
+
+        function loadXMLDoc(filename) {
+            var xhttp;
+            if (window.XMLHttpRequest) {
+                xhttp = new XMLHttpRequest();
+            } else {
+                xhttp = new ActiveXObject("Microsoft.XMLHTTP");
+            }
+            xhttp.open("GET", filename, false);
+            xhttp.send();
+            return xhttp.responseXML;
+        }
+    </script>
+</head>
+<body>
+    <center>
+        <h1>학생 정보 검색</h1>
+        <label for="nameInput">이름:</label>
+        <input type="text" id="nameInput">
+        <button onclick="searchStudent()">검색</button><br><br>
+        <div id="searchResult"></div>
+    </center>
+</body>
+</html>

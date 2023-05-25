@@ -1,0 +1,65 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<title>Reads XML data using JavaScript</title>
+	
+<script>
+
+function loadXMLDoc() {
+	var xmlhttp = new XMLHttpRequest();
+	xmlhttp.onreadystatechange = function () {
+
+		if (this.readyState == 4 && this.status == 200) {
+		   display_items(this);
+		}
+	};
+
+	xmlhttp.open("GET", "faculty.xml", true);
+	xmlhttp.send();
+}
+
+function display_items(xml)
+{
+	var i, j, table = "";
+	var xmlDoc = xml.responseXML;
+    var x = xmlDoc.getElementsByTagName("PROFESSOR");
+
+	table += "<table border=1 width=80% align=center>" +
+	"<tr bgcolor=#7ce2af>" +
+		"<td width=50% align=center>" + x[0].childNodes[1].nodeName + "</td>" +
+//		"<td width=50% align=center>" + x[0].getElementsByTagName("NAME")[0].nodeName + "</td>" +
+		"<td width=50% align=center>" + x[0].getElementsByTagName("MAJOR")[0].nodeName + 
+	"</td></tr>";
+
+    for ( i = 0; i < x.length; i++ )
+        {
+            table +=
+				"<tr><td align=center>" + 
+					x[i].getElementsByTagName("NAME")[0].childNodes[0].nodeValue + 
+				"</td>" +
+				"<td align=center>" + 
+					x[i].getElementsByTagName("MAJOR")[0].childNodes[0].nodeValue + 
+				"</td></tr>";
+		}
+	table += "</table><br>";
+
+	document.getElementById("id").innerHTML = table;
+}
+
+</script>
+</head>
+
+<body>
+<br>
+<center>
+<h1>Displaying the table from XML elements</h1><br><br>
+<button type="button" class="button" onclick="loadXMLDoc()">Try it!</button>
+<br>
+<br>
+<h3 align="center"><font face="Times New Roman"> Copyright (C) 2023 by James Lee<br>
+All Rights Reserved.</font></h3>
+</center>
+<br><hr>
+<p id="id"></p>
+</body>
+</html>

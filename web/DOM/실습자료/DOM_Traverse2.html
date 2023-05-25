@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<p id="id"></p>
+
+<script>
+
+var text = 
+"<TU_FACULTY>" +
+    "<PROFESSOR>" +
+        "<NAME>이강혁</NAME>" +
+        "<TITLE>교수</TITLE>" +
+        "<ADDRESS>608-711 부산시 남구 신선로 428 동명대학교 게임공학과</ADDRESS>" +
+        "<MAJOR>자연어처리</MAJOR>" +
+        "<PHONE>82-51-629-1251</PHONE>" +
+        "<FAX>82-51-629-1251</FAX>" +
+        "<MOBILE>010-2203-6657</MOBILE>" +
+        "<EMAIL>klee@tu.ac.kr</EMAIL>" +
+        "<HOMEPAGE>https://game.tu.ac.kr</HOMEPAGE>" +
+        "<EDU>1993년 1월 Unversity of Illinois at Urbana-Champaign 졸업 (박사)</EDU>" +
+    "</PROFESSOR>" +
+    "<PROFESSOR>" +
+        "<NAME>강영민</NAME>" +
+        "<TITLE>교수</TITLE>" +
+        "<ADDRESS>608-711 부산시 남구 신선로 428 동명대학교 게임공학과</ADDRESS>" +
+        "<MAJOR>게임그래픽스</MAJOR>" +
+        "<PHONE>82-51-610-8411</PHONE>" +
+        "<FAX>82-51-610-8349</FAX>" +
+        "<MOBILE>010-8444-8520</MOBILE>" +
+        "<EMAIL>ymkang@tu.ac.kr</EMAIL>" +
+        "<HOMEPAGE>https://game.tu.ac.kr</HOMEPAGE>" +
+        "<EDU>2000년 부산대학교 졸업 (박사)</EDU>" +
+    "</PROFESSOR>" +
+"</TU_FACULTY>";
+
+
+parser = new DOMParser();
+xmlDoc = parser.parseFromString(text,"text/xml");
+
+var x = xmlDoc.documentElement.childNodes;
+var i, j, table = "";
+
+// 신상정보 모두 보기를 loop문
+for ( i = 0; i < x.length; i++ )
+    {
+		table += "<table border=1 width=80% align=center>";
+		for ( j = 0; j < x[i].childNodes.length; j++ )
+            {
+                table +=
+			    "<tr><td>" + x[i].childNodes[j].nodeName + "</td>" +
+			    "<td>" + x[i].childNodes[j].childNodes[0].nodeValue + "</td></tr>";
+                // 이렇게 코딩해도 되지만 innerHTML은 태그 내의 모든 정보이므로 주의가 필요함
+                // "<tr><td>" + x[i].childNodes[j].tagName + "</td>" +
+                // "<td>" + x[i].childNodes[j].innerHTML + "</td></tr>";
+            }
+        table += "</table><br>";
+    }
+
+	document.getElementById("id").innerHTML = table;
+
+</script>
+
+</body>
+</html>

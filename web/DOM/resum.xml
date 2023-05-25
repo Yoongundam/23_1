@@ -1,0 +1,51 @@
+﻿<resum>
+    <Student ID="01">
+        <Name>윤건</Name>
+        <English>Yoon Gun</English>
+        <Chinese>尹建</Chinese>
+        <birth>000812-3******</birth>
+        <Age>24</Age>
+        <Phonnenumber>010.4947.4336</Phonnenumber>
+        <E-mail>gun4336@naver.com</E-mail>
+        <SNS>ins) y_gun4336</SNS>
+        <live>부산광역시 남구</live>
+        <university>동명대학교 게임공학과</university> 
+    </Student>
+    <Student ID="02">
+        <Name>강해린</Name>
+        <English>Yoon Gun</English>
+        <Chinese>尹建</Chinese>
+        <birth>000812-3******</birth>
+        <Age>16</Age>
+        <Phonnenumber>010.4947.4336</Phonnenumber>
+        <E-mail>cathaerin@naver.com</E-mail>
+        <SNS>ins) y_gun4336</SNS>
+        <live>부산광역시 남구</live>
+        <university>동명대학교 게임공학과</university> 
+    </Student>
+    <Student ID="03">
+        <Name>최예나</Name>
+        <English>Yoon Gun</English>
+        <Chinese>尹建</Chinese>
+        <birth>000812-3******</birth>
+        <Age>25</Age>
+        <Phonnenumber>010.4947.4336</Phonnenumber>
+        <E-mail>yena@naver.com</E-mail>
+        <SNS>ins) y_gun4336</SNS>
+        <live>부산광역시 남구</live>
+        <university>동명대학교 게임공학과</university> 
+    </Student>
+    <Student ID="04">
+        <Name>연두부</Name>
+        <English>Yoon Gun</English>
+        <Chinese>尹建</Chinese>
+        <birth>000812-3******</birth>
+        <Age>28</Age>
+        <Phonnenumber>010.4947.4336</Phonnenumber>
+        <E-mail>dubdub@naver.com</E-mail>
+        <SNS>ins) y_gun4336</SNS>
+        <live>부산광역시 남구</live>
+        <university>동명대학교 게임공학과</university> 
+    </Student>
+
+</resum>

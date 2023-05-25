@@ -1,0 +1,62 @@
+﻿<TU_FACULTY>
+  <PROFESSOR ID="TU-1001">
+	  <NAME>이강혁</NAME>
+	  <TITLE>교수</TITLE>
+	  <ADDRESS>608-711 부산시 남구 신선로 428 동명대학교 게임공학과</ADDRESS>
+	  <MAJOR>자연어처리</MAJOR>
+	  <PHONE>82-51-629-1251</PHONE>
+	  <FAX>82-51-629-1249</FAX>
+	  <MOBILE>010-2203-6657</MOBILE>
+	  <EMAIL>klee@tu.ac.kr</EMAIL>
+	  <HOMEPAGE>http://game.tu.ac.kr</HOMEPAGE>
+	  <EDU>1993년 1월 Unversity of Illinois at Urbana-Champaign 졸업 (박사)</EDU>
+  </PROFESSOR>
+  <PROFESSOR ID="TU-1002">
+	  <NAME>옥수열</NAME>
+	  <TITLE>교수</TITLE>
+	  <ADDRESS>608-711 부산시 남구 신선로 428 동명대학교 게임공학과</ADDRESS>
+	  <MAJOR>인공지능</MAJOR>
+	  <PHONE>82-51-629-1252</PHONE>
+	  <FAX>82-51-629-1249</FAX>
+	  <MOBILE>011-9354-8857</MOBILE>
+	  <EMAIL>sooyol@tu.ac.kr</EMAIL>
+	  <HOMEPAGE>http://game.tu.ac.kr</HOMEPAGE>
+	  <EDU>1999년 츠쿠바대학교 졸업 (박사)</EDU>
+  </PROFESSOR>
+  <PROFESSOR ID="TU-1003">
+	  <NAME>강영민</NAME>
+	  <TITLE>교수</TITLE>
+	  <ADDRESS>608-711 부산시 남구 신선로 428 동명대학교 게임공학과</ADDRESS>
+	  <MAJOR>게임그래픽스</MAJOR>
+	  <PHONE>82-51-610-8411</PHONE>
+	  <FAX>82-51-610-8349</FAX>
+	  <MOBILE>016-844-8520</MOBILE>
+	  <EMAIL>osw@tu.ac.kr</EMAIL>
+	  <HOMEPAGE>http://game.tu.ac.kr</HOMEPAGE>
+	  <EDU>2000년 부산대학교 졸업 (박사)</EDU>
+  </PROFESSOR>
+  <PROFESSOR ID="TU-1003">
+	  <NAME>배재환</NAME>
+	  <TITLE>교수</TITLE>
+	  <ADDRESS>608-711 부산시 남구 신선로 428 동명대학교 게임공학과</ADDRESS>
+	  <MAJOR>게임서버</MAJOR>
+	  <PHONE>82-51-610-8412</PHONE>
+	  <FAX>82-51-610-8349</FAX>
+	  <MOBILE>016-550-7231</MOBILE>
+	  <EMAIL>bjh@tu.ac.kr</EMAIL>
+	  <HOMEPAGE>http://multi.tit.ac.kr</HOMEPAGE>
+	  <EDU>1997년 부산대학교 졸업 (박사)</EDU>
+  </PROFESSOR>
+  <PROFESSOR ID="TU-1004">
+	  <NAME>이강혁</NAME>
+	  <TITLE>교수</TITLE>
+	  <ADDRESS>608-711 부산시 남구 신선로 428 동명대학교 게임공학과</ADDRESS>
+	  <MAJOR>인공지능</MAJOR>
+	  <PHONE>82-51-629-1251</PHONE>
+	  <FAX>82-51-629-1249</FAX>
+	  <MOBILE>019-203-6657</MOBILE>
+	  <EMAIL>klee@tu.ac.kr</EMAIL>
+	  <HOMEPAGE>http://blog.tu.ac.kr/klee</HOMEPAGE>
+	  <EDU>1993년 1월 University of Illinois at Urbana-Champaign (박사)</EDU>
+	</PROFESSOR>
+</TU_FACULTY>
