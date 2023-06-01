@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>학생 정보 검색</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 50%;
+        }
+        th, td {
+            padding: 8px;
+            text-align: center;
+        }
+        .center {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+    </style>
+    <script>
+        function searchStudent() {
+            var input = document.getElementById("searchInput").value;
+            var xmlDoc = loadXMLDoc("resum.xml");
+            var students = xmlDoc.getElementsByTagName("Student");
+            var result = document.getElementById("searchResult");
+
+            var tableHTML = "<table border=1>" +
+                            "<tbody>" +
+                            "<tr><th>학생 ID</th><th>이름</th><th>나이</th><th>전화번호</th><th>이메일</th></tr>";
+
+            for (var i = 0; i < students.length; i++) {
+                var studentID = students[i].getAttribute("ID");
+                var name = students[i].getElementsByTagName("Name")[0].textContent;
+                var age = students[i].getElementsByTagName("Age")[0].textContent;
+                var phoneNumber = students[i].getElementsByTagName("Phonnenumber")[0].textContent;
+                var email = students[i].getElementsByTagName("E-mail")[0].textContent;
+
+                if (studentID.includes(input) || name.includes(input) || age.includes(input) || phoneNumber.includes(input) || email.includes(input)) {
+                    tableHTML += "<tr><td>" + studentID + "</td><td>" + name + "</td><td>" + age + "</td><td>" + phoneNumber + "</td><td>" + email + "</td></tr>";
+                }
+            }
+
+            tableHTML += "</tbody></table>";
+
+            if (tableHTML === "<table border=1><tbody><tr><th>학생 ID</th><th>이름</th><th>나이</th><th>전화번호</th><th>이메일</th></tr></tbody></table>") {
+                alert("일치하는 학생을 찾을 수 없습니다.");
+            } else {
+                result.innerHTML = tableHTML;
+            }
+        }
+
+        function loadXMLDoc(filename) {
+            var xhttp;
+            if (window.XMLHttpRequest) {
+                xhttp = new XMLHttpRequest();
+            } else {
+                xhttp = new ActiveXObject("Microsoft.XMLHTTP");
+            }
+            xhttp.open("GET", filename, false);
+            xhttp.send();
+            return xhttp.responseXML;
+        }
+    </script>
+</head>
+<body>
+    <center>
+        <h1>학생 정보 검색</h1>
+        <label for="searchInput">검색어:</label>
+        <input type="text" id="searchInput">
+        <button onclick="searchStudent()">검색</button><br><br>
+        <div id="searchResult"></div>
+    </center>
+</body>
+</html>
