@@ -1,5 +1,6 @@
 ﻿<resum>
-    <Student ID="01">
+<!--학생 정보가 담겨있는 xml 검색 할 때는 id, 이름, 나이, 전화번호, 이메일만 사용하니까 그것만 작성해도 됨-->
+    <Student ID="01"><!--Student 태그를 여러번 사용해야 하기때문에 ID 사용-->
         <Name>윤건</Name>
         <English>Yoon Gun</English>
         <Chinese>尹建</Chinese>
