@@ -25,27 +25,33 @@ public:
 		if (!isFull())vertices[size++] = name;
 		else cout << "Error: 그래프 정점 개수 초과\n";
 	}
-	void insertEdge(int u, int v ,int w) {
-		setEdge(u, v, w);
-		setEdge(v, u, w);
+	void insertEdge(char u, char v, int w) {
+		int uIndex = u - 'A';
+		int vIndex = v - 'A';
+		setEdge(uIndex, vIndex, w);
+		setEdge(vIndex, uIndex, w);
 	}
-	void deleteEdge(int u, int v) {
-		setEdge(u, v, 0);
-		setEdge(v, u, 0);
+	void deleteEdge(char u, char v) {
+		int uIndex = u - 'A';
+		int vIndex = v - 'A';
+		setEdge(uIndex, vIndex, 0);
+		setEdge(vIndex, uIndex, 0);
 	}
-	int degree(int v) {
+	int degree(char v) {
+		int vIndex = v - 'A';
 		int count = 0;
-		for (int i=0; i < size; i++) {
-			if (adj[v][i] != 0)
+		for (int i = 0; i < size; i++) {
+			if (adj[vIndex][i] != 0)
 				count++;
 		}
 		return count;
 	}
-	void adjacent(int u) {
-		cout << getVertex(u) << "와 인접한 정점들 : ";
+	void adjacent(char v) {
+		int vIndex = v - 'A';
+		cout << getVertex(vIndex) << "와 인접한 정점들: ";
 		for (int i = 0; i < size; i++) {
-			if (adj[u][i] != 0)
-				cout << getVertex(i)<<" ";
+			if (adj[vIndex][i] != 0)
+				cout << getVertex(i) << " ";
 		}
 		cout << endl;
 	}
